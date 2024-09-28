@@ -1,13 +1,12 @@
 n = input()
-a = input().split(" ")
-a = [int(element) for element in a]
-print(a)
+a = list(map(int, input().split(" ")))
 count = 0
-# while(1):
-#     for element in a:
-#         if element % 2 != 0:
-#             break
-#         element /= 2
-#     count += 1
-#     print(a)
-# print(count)
+while(1):
+    a_mod = list(map(lambda x: x%2 ,a))
+    if 1 in a_mod:
+        break
+    a = list(map(lambda x: x/2 ,a))
+    count += 1
+print(count)
+
+
